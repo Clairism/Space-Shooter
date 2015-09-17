@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class PlayerForce : MonoBehaviour {
+
+	public GameObject fireworkToSpawn;
 	
 
 	// Use this for initialization
@@ -35,6 +37,9 @@ public class PlayerForce : MonoBehaviour {
 			gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 30);
 			
 		}
-	
+
+		if ( Input.GetKey(KeyCode.LeftShift)) {
+			Instantiate ( fireworkToSpawn, transform.position, transform.rotation );
+		}
 	}
 }
