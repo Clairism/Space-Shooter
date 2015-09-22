@@ -16,7 +16,7 @@ public class ShootRandom : MonoBehaviour {
 		Instantiate (shootingObject, transform.position, transform.rotation);
 
 		canshoot = false;
-		Invoke ("turnOnShooter", Random.Range(.5f, 2f));
+		Invoke ("turnOnShooter", Random.Range(.5f, 4f));
 	}
 
 	void turnOnShooter() {
