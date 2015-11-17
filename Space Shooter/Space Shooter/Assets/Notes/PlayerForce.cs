@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerForce : MonoBehaviour {
-	public float speed = 10;
+//	public float speed = 50;
 
 	// Use this for initialization
 	void Start () {
@@ -15,11 +15,11 @@ public class PlayerForce : MonoBehaviour {
 		Rigidbody bullet = GetComponent<Rigidbody> ();
 
 		Input.GetAxis ("Horizontal");
-		bullet.AddForce ( new Vector3 ( speed * Time.deltaTime, 0, 0) * Input.GetAxis ("Horizontal") );
+		bullet.AddForce ( new Vector3 ( 2800, 0, 0) * Input.GetAxis ("Horizontal") );
 
 
 		Input.GetAxis ("Vertical");
-		bullet.AddForce ( new Vector3 (0, speed * Time.deltaTime, 0) * Input.GetAxis ("Vertical"));
+		bullet.AddForce ( new Vector3 (0, 2800, 0) * Input.GetAxis ("Vertical"));
 
 	}
 }
